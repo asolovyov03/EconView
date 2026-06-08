@@ -1,0 +1,11 @@
+fastapi>=0.115
+uvicorn[standard]>=0.34
+httpx>=0.28
+pydantic>=2.10
+pydantic-settings>=2.7
+python-dotenv>=1.0
+streamlit>=1.42
+plotly>=6.0
+pandas>=2.2
+requests>=2.32
+ruff>=0.11
