@@ -35,7 +35,7 @@ def _build_series(
         )
 
     series_tuples = [(p.year, p.value) for p in points]
-    yoy_data = year_over_year(series_tuples)
+    yoy_data = year_over_year(series = series_tuples, unit = meta.unit)
     base_year = points[0].year if points else 2000
     indexed_data = normalize_to_base(series_tuples, base_year)
     computed_cagr = cagr(series_tuples)

@@ -1,7 +1,7 @@
 from typing import Optional
 
 
-def year_over_year(series: list[tuple[int, Optional[float]]]) -> list[tuple[int, Optional[float]]]:
+def year_over_year(series: list[tuple[int, Optional[float]]], unit: str) -> list[tuple[int, Optional[float]]]:
     result: list[tuple[int, Optional[float]]] = [(series[0][0], None)]
     for i in range(1, len(series)):
         year, val = series[i]
@@ -9,7 +9,10 @@ def year_over_year(series: list[tuple[int, Optional[float]]]) -> list[tuple[int,
         if prev is None or prev == 0 or val is None:
             result.append((year, None))
         else:
-            result.append((year, round(((val - prev) / prev) * 100, 2)))
+            if unit == "%":
+                result.append((year, round(val - prev, 2)))
+            else:
+                result.append((year, round(((val - prev) / prev) * 100, 2)))
     return result
 
 
