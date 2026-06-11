@@ -49,3 +49,9 @@ Frontend: http://localhost:8501
 | GET | `/series/{iso3}/{indicator}` | Series data by country and indicator |
 | GET | `/dashboard/{iso3}` | All 15 indicators by country |
 | POST | `/admin/cache/clear` | Clear in-memory cache |
+
+## Screenshots
+<img width="1368" height="434" alt="image" src="https://github.com/user-attachments/assets/df7ec72e-ddfb-494f-890a-04ca867d30ee" />
+
+<img width="1359" height="669" alt="image" src="https://github.com/user-attachments/assets/2481925d-7d48-4d1b-8a73-5b2f68721ab2" />
+
